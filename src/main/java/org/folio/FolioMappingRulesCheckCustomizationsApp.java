@@ -1,7 +1,7 @@
 package org.folio;
 
 import lombok.extern.slf4j.Slf4j;
-import org.folio.service.UpdateMappingRulesService;
+import org.folio.service.CheckMappingRulesCustomizationsService;
 import org.folio.util.FileWorker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -15,7 +15,7 @@ import java.io.File;
 public class FolioMappingRulesCheckCustomizationsApp implements CommandLineRunner {
 
     @Autowired
-    private UpdateMappingRulesService service;
+    private CheckMappingRulesCustomizationsService service;
 
     public static void main(String[] args) {
         SpringApplication.run(FolioMappingRulesCheckCustomizationsApp.class, args);

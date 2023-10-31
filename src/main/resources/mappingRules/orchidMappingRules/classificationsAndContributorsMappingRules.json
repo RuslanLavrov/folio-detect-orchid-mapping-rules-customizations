@@ -1,0 +1,1040 @@
+{
+  "050": [
+    {
+      "entity": [
+        {
+          "target": "classifications.classificationTypeId",
+          "description": "Type for LC classification",
+          "applyRulesOnConcatenatedData": true,
+          "subfield": [
+            "a",
+            "b"
+          ],
+          "rules": [
+            {
+              "conditions": [
+                {
+                  "type": "set_classification_type_id",
+                  "parameter": {
+                    "name": "LC"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "target": "classifications.classificationNumber",
+          "description": "LC classification",
+          "applyRulesOnConcatenatedData": true,
+          "subfield": [
+            "a",
+            "b"
+          ]
+        }
+      ]
+    }
+  ],
+  "060": [
+    {
+      "entity": [
+        {
+          "target": "classifications.classificationTypeId",
+          "description": "Type for NLM classification",
+          "applyRulesOnConcatenatedData": true,
+          "subfield": [
+            "a",
+            "b"
+          ],
+          "rules": [
+            {
+              "conditions": [
+                {
+                  "type": "set_classification_type_id",
+                  "parameter": {
+                    "name": "NLM"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "target": "classifications.classificationNumber",
+          "description": "NLM classification",
+          "applyRulesOnConcatenatedData": true,
+          "subfield": [
+            "a",
+            "b"
+          ]
+        }
+      ]
+    }
+  ],
+  "082": [
+    {
+      "entity": [
+        {
+          "target": "classifications.classificationTypeId",
+          "description": "Type for Dewey classification",
+          "applyRulesOnConcatenatedData": true,
+          "subfield": [
+            "a",
+            "b"
+          ],
+          "rules": [
+            {
+              "conditions": [
+                {
+                  "type": "set_classification_type_id",
+                  "parameter": {
+                    "name": "Dewey"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "target": "classifications.classificationNumber",
+          "description": "Dewey classification",
+          "applyRulesOnConcatenatedData": true,
+          "subfield": [
+            "a",
+            "b"
+          ],
+          "rules": [
+            {
+              "conditions": [
+                {
+                  "type": "remove_substring",
+                  "parameter": {
+                    "substring": "/"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "090": [
+    {
+      "entity": [
+        {
+          "target": "classifications.classificationTypeId",
+          "description": "Type for LC classification",
+          "applyRulesOnConcatenatedData": true,
+          "subfield": [
+            "a",
+            "b"
+          ],
+          "rules": [
+            {
+              "conditions": [
+                {
+                  "type": "set_classification_type_id",
+                  "parameter": {
+                    "name": "LC"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "target": "classifications.classificationNumber",
+          "description": "LC classification",
+          "applyRulesOnConcatenatedData": true,
+          "subfield": [
+            "a",
+            "b"
+          ]
+        }
+      ]
+    }
+  ],
+  "100": [
+    {
+      "entity": [
+        {
+          "target": "contributors.authorityId",
+          "description": "Authority ID that controlling the contributor",
+          "applyRulesOnConcatenatedData": true,
+          "subfield": [
+            "9"
+          ]
+        },
+        {
+          "target": "contributors.contributorNameTypeId",
+          "description": "Type for Personal Name",
+          "applyRulesOnConcatenatedData": true,
+          "subfield": [
+          ],
+          "rules": [
+            {
+              "conditions": [
+                {
+                  "type": "set_contributor_name_type_id",
+                  "parameter": {
+                    "name": "Personal name"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "rules": [
+            {
+              "conditions": [
+                {
+                  "type": "set_contributor_type_id_by_code_or_name",
+                  "parameter": {
+                    "contributorCodeSubfield": "4",
+                    "contributorNameSubfield": "e"
+                  }
+                }
+              ]
+            }
+          ],
+          "target": "contributors.contributorTypeId",
+          "subfield": [
+            "4",
+            "e"
+          ],
+          "description": "Type of contributor",
+          "alternativeMapping": {
+            "target": "contributors.contributorTypeText",
+            "subfield": [
+              "e"
+            ],
+            "ignoreSubsequentSubfields": true
+          },
+          "applyRulesOnConcatenatedData": true
+        },
+        {
+          "target": "contributors.primary",
+          "description": "Primary contributor",
+          "applyRulesOnConcatenatedData": true,
+          "subfield": [
+          ],
+          "rules": [
+            {
+              "conditions": [],
+              "value": "true"
+            }
+          ]
+        },
+        {
+          "target": "contributors.name",
+          "description": "Personal Name",
+          "subfield": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "f",
+            "g",
+            "j",
+            "k",
+            "l",
+            "n",
+            "p",
+            "q",
+            "t",
+            "u"
+          ],
+          "applyRulesOnConcatenatedData": true,
+          "rules": [
+            {
+              "conditions": [
+                {
+                  "type": "trim_period, trim"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "110": [
+    {
+      "entity": [
+        {
+          "target": "contributors.authorityId",
+          "description": "Authority ID that controlling the contributor",
+          "applyRulesOnConcatenatedData": true,
+          "subfield": [
+            "9"
+          ]
+        },
+        {
+          "target": "contributors.contributorNameTypeId",
+          "description": "Type for Corporate Name",
+          "applyRulesOnConcatenatedData": true,
+          "subfield": [
+          ],
+          "rules": [
+            {
+              "conditions": [
+                {
+                  "type": "set_contributor_name_type_id",
+                  "parameter": {
+                    "name": "Corporate name"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "rules": [
+            {
+              "conditions": [
+                {
+                  "type": "set_contributor_type_id_by_code_or_name",
+                  "parameter": {
+                    "contributorCodeSubfield": "4",
+                    "contributorNameSubfield": "e"
+                  }
+                }
+              ]
+            }
+          ],
+          "target": "contributors.contributorTypeId",
+          "subfield": [
+            "4",
+            "e"
+          ],
+          "description": "Type of contributor",
+          "alternativeMapping": {
+            "target": "contributors.contributorTypeText",
+            "subfield": [
+              "e"
+            ],
+            "ignoreSubsequentSubfields": true
+          },
+          "applyRulesOnConcatenatedData": true
+        },
+        {
+          "target": "contributors.primary",
+          "description": "Primary contributor",
+          "applyRulesOnConcatenatedData": true,
+          "subfield": [
+          ],
+          "rules": [
+            {
+              "conditions": [],
+              "value": "true"
+            }
+          ]
+        },
+        {
+          "target": "contributors.name",
+          "description": "Corporate Name",
+          "subfield": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "f",
+            "g",
+            "k",
+            "l",
+            "n",
+            "p",
+            "t",
+            "u"
+          ],
+          "applyRulesOnConcatenatedData": true,
+          "rules": [
+            {
+              "conditions": [
+                {
+                  "type": "trim_period, trim"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "111": [
+    {
+      "entity": [
+        {
+          "target": "contributors.authorityId",
+          "description": "Authority ID that controlling the contributor",
+          "applyRulesOnConcatenatedData": true,
+          "subfield": [
+            "9"
+          ]
+        },
+        {
+          "target": "contributors.contributorNameTypeId",
+          "description": "Type for Meeting Name",
+          "applyRulesOnConcatenatedData": true,
+          "subfield": [
+          ],
+          "rules": [
+            {
+              "conditions": [
+                {
+                  "type": "set_contributor_name_type_id",
+                  "parameter": {
+                    "name": "Meeting name"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "rules": [
+            {
+              "conditions": [
+                {
+                  "type": "set_contributor_type_id_by_code_or_name",
+                  "parameter": {
+                    "contributorCodeSubfield": "4",
+                    "contributorNameSubfield": "j"
+                  }
+                }
+              ]
+            }
+          ],
+          "target": "contributors.contributorTypeId",
+          "subfield": [
+            "4",
+            "j"
+          ],
+          "description": "Type of contributor",
+          "alternativeMapping": {
+            "target": "contributors.contributorTypeText",
+            "subfield": [
+              "j"
+            ],
+            "ignoreSubsequentSubfields": true
+          },
+          "applyRulesOnConcatenatedData": true
+        },
+        {
+          "target": "contributors.primary",
+          "description": "Primary contributor",
+          "applyRulesOnConcatenatedData": true,
+          "subfield": [
+          ],
+          "rules": [
+            {
+              "conditions": [],
+              "value": "true"
+            }
+          ]
+        },
+        {
+          "target": "contributors.name",
+          "description": "Meeting Name",
+          "subfield": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "f",
+            "g",
+            "k",
+            "l",
+            "n",
+            "p",
+            "t",
+            "u"
+          ],
+          "applyRulesOnConcatenatedData": true,
+          "rules": [
+            {
+              "conditions": [
+                {
+                  "type": "trim_period, trim"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "700": [
+    {
+      "entity": [
+        {
+          "target": "contributors.authorityId",
+          "description": "Authority ID that controlling the contributor",
+          "applyRulesOnConcatenatedData": true,
+          "subfield": [
+            "9"
+          ]
+        },
+        {
+          "target": "contributors.contributorNameTypeId",
+          "description": "Type for Personal Name",
+          "applyRulesOnConcatenatedData": true,
+          "subfield": [
+          ],
+          "rules": [
+            {
+              "conditions": [
+                {
+                  "type": "set_contributor_name_type_id",
+                  "parameter": {
+                    "name": "Personal name"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "rules": [
+            {
+              "conditions": [
+                {
+                  "type": "set_contributor_type_id_by_code_or_name",
+                  "parameter": {
+                    "contributorCodeSubfield": "4",
+                    "contributorNameSubfield": "e"
+                  }
+                }
+              ]
+            }
+          ],
+          "target": "contributors.contributorTypeId",
+          "subfield": [
+            "4",
+            "e"
+          ],
+          "description": "Type of contributor",
+          "alternativeMapping": {
+            "target": "contributors.contributorTypeText",
+            "subfield": [
+              "e"
+            ],
+            "ignoreSubsequentSubfields": true
+          },
+          "applyRulesOnConcatenatedData": true
+        },
+        {
+          "target": "contributors.primary",
+          "description": "Primary contributor",
+          "applyRulesOnConcatenatedData": true,
+          "subfield": [
+          ],
+          "rules": [
+            {
+              "conditions": [],
+              "value": "false"
+            }
+          ]
+        },
+        {
+          "target": "contributors.name",
+          "description": "Personal Name",
+          "subfield": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "f",
+            "g",
+            "j",
+            "k",
+            "l",
+            "n",
+            "p",
+            "q",
+            "t",
+            "u"
+          ],
+          "applyRulesOnConcatenatedData": true,
+          "rules": [
+            {
+              "conditions": [
+                {
+                  "type": "trim_period, trim"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "710": [
+    {
+      "entity": [
+        {
+          "target": "contributors.authorityId",
+          "description": "Authority ID that controlling the contributor",
+          "applyRulesOnConcatenatedData": true,
+          "subfield": [
+            "9"
+          ]
+        },
+        {
+          "target": "contributors.contributorNameTypeId",
+          "description": "Type for Corporate Name",
+          "applyRulesOnConcatenatedData": true,
+          "subfield": [
+          ],
+          "rules": [
+            {
+              "conditions": [
+                {
+                  "type": "set_contributor_name_type_id",
+                  "parameter": {
+                    "name": "Corporate name"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "rules": [
+            {
+              "conditions": [
+                {
+                  "type": "set_contributor_type_id_by_code_or_name",
+                  "parameter": {
+                    "contributorCodeSubfield": "4",
+                    "contributorNameSubfield": "e"
+                  }
+                }
+              ]
+            }
+          ],
+          "target": "contributors.contributorTypeId",
+          "subfield": [
+            "4",
+            "e"
+          ],
+          "description": "Type of contributor",
+          "alternativeMapping": {
+            "target": "contributors.contributorTypeText",
+            "subfield": [
+              "e"
+            ],
+            "ignoreSubsequentSubfields": true
+          },
+          "applyRulesOnConcatenatedData": true
+        },
+        {
+          "target": "contributors.primary",
+          "description": "Primary contributor",
+          "applyRulesOnConcatenatedData": true,
+          "subfield": [
+          ],
+          "rules": [
+            {
+              "conditions": [],
+              "value": "false"
+            }
+          ]
+        },
+        {
+          "target": "contributors.name",
+          "description": "Corporate Name",
+          "subfield": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "f",
+            "g",
+            "k",
+            "l",
+            "n",
+            "p",
+            "t",
+            "u"
+          ],
+          "applyRulesOnConcatenatedData": true,
+          "rules": [
+            {
+              "conditions": [
+                {
+                  "type": "trim_period, trim"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "711": [
+    {
+      "entity": [
+        {
+          "target": "contributors.authorityId",
+          "description": "Authority ID that controlling the contributor",
+          "applyRulesOnConcatenatedData": true,
+          "subfield": [
+            "9"
+          ]
+        },
+        {
+          "target": "contributors.contributorNameTypeId",
+          "description": "Type for Meeting Name",
+          "applyRulesOnConcatenatedData": true,
+          "subfield": [
+          ],
+          "rules": [
+            {
+              "conditions": [
+                {
+                  "type": "set_contributor_name_type_id",
+                  "parameter": {
+                    "name": "Meeting name"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "rules": [
+            {
+              "conditions": [
+                {
+                  "type": "set_contributor_type_id_by_code_or_name",
+                  "parameter": {
+                    "contributorCodeSubfield": "4",
+                    "contributorNameSubfield": "j"
+                  }
+                }
+              ]
+            }
+          ],
+          "target": "contributors.contributorTypeId",
+          "subfield": [
+            "4",
+            "j"
+          ],
+          "description": "Type of contributor",
+          "alternativeMapping": {
+            "target": "contributors.contributorTypeText",
+            "subfield": [
+              "j"
+            ],
+            "ignoreSubsequentSubfields": true
+          },
+          "applyRulesOnConcatenatedData": true
+        },
+        {
+          "target": "contributors.primary",
+          "description": "Primary contributor",
+          "applyRulesOnConcatenatedData": true,
+          "subfield": [
+          ],
+          "rules": [
+            {
+              "conditions": [],
+              "value": "false"
+            }
+          ]
+        },
+        {
+          "target": "contributors.name",
+          "description": "Meeting Name",
+          "subfield": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "f",
+            "g",
+            "k",
+            "l",
+            "n",
+            "p",
+            "t",
+            "u"
+          ],
+          "applyRulesOnConcatenatedData": true,
+          "rules": [
+            {
+              "conditions": [
+                {
+                  "type": "trim_period, trim"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "720": [
+    {
+      "indicators": {
+        "ind1": "1",
+        "ind2": "*"
+      },
+      "entity": [
+        {
+          "target": "contributors.contributorNameTypeId",
+          "description": "Type for Personal Name",
+          "applyRulesOnConcatenatedData": true,
+          "subfield": [],
+          "rules": [
+            {
+              "conditions": [
+                {
+                  "type": "set_contributor_name_type_id",
+                  "parameter": {
+                    "name": "Personal name"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "target": "contributors.contributorTypeId",
+          "description": "Type of contributor",
+          "applyRulesOnConcatenatedData": true,
+          "subfield": [
+            "4",
+            "e"
+          ],
+          "rules": [
+            {
+              "conditions": [
+                {
+                  "type": "set_contributor_type_id_by_code_or_name",
+                  "parameter": {
+                    "contributorCodeSubfield": "4",
+                    "contributorNameSubfield": "e"
+                  }
+                }
+              ]
+            }
+          ],
+          "alternativeMapping": {
+            "target": "contributors.contributorTypeText",
+            "description": "Contributor type free text",
+            "ignoreSubsequentSubfields": true,
+            "subfield": [
+              "e"
+            ]
+          }
+        },
+        {
+          "target": "contributors.primary",
+          "description": "Primary contributor",
+          "applyRulesOnConcatenatedData": true,
+          "subfield": [
+          ],
+          "rules": [
+            {
+              "conditions": [],
+              "value": "false"
+            }
+          ]
+        },
+        {
+          "target": "contributors.name",
+          "description": "Personal Name",
+          "applyRulesOnConcatenatedData": true,
+          "subfield": [
+            "a"
+          ],
+          "rules": [
+            {
+              "conditions": [
+                {
+                  "type": "trim_period, trim"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "indicators": {
+        "ind1": " ",
+        "ind2": "*"
+      },
+      "entity": [
+        {
+          "target": "contributors.contributorNameTypeId",
+          "description": "Type for Personal Name",
+          "applyRulesOnConcatenatedData": true,
+          "subfield": [],
+          "rules": [
+            {
+              "conditions": [
+                {
+                  "type": "set_contributor_name_type_id",
+                  "parameter": {
+                    "name": "Personal name"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "target": "contributors.contributorTypeId",
+          "description": "Type of contributor",
+          "applyRulesOnConcatenatedData": true,
+          "subfield": [
+            "4",
+            "e"
+          ],
+          "rules": [
+            {
+              "conditions": [
+                {
+                  "type": "set_contributor_type_id_by_code_or_name",
+                  "parameter": {
+                    "contributorCodeSubfield": "4",
+                    "contributorNameSubfield": "e"
+                  }
+                }
+              ]
+            }
+          ],
+          "alternativeMapping": {
+            "target": "contributors.contributorTypeText",
+            "description": "Contributor type free text",
+            "ignoreSubsequentSubfields": true,
+            "subfield": [
+              "e"
+            ]
+          }
+        },
+        {
+          "target": "contributors.primary",
+          "description": "Primary contributor",
+          "applyRulesOnConcatenatedData": true,
+          "subfield": [
+          ],
+          "rules": [
+            {
+              "conditions": [],
+              "value": "false"
+            }
+          ]
+        },
+        {
+          "target": "contributors.name",
+          "description": "Personal Name",
+          "applyRulesOnConcatenatedData": true,
+          "subfield": [
+            "a"
+          ],
+          "rules": [
+            {
+              "conditions": [
+                {
+                  "type": "trim_period, trim"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "indicators": {
+        "ind1": "2",
+        "ind2": "*"
+      },
+      "entity": [
+        {
+          "target": "contributors.contributorNameTypeId",
+          "description": "Type for Corporate Name",
+          "applyRulesOnConcatenatedData": true,
+          "subfield": [],
+          "rules": [
+            {
+              "conditions": [
+                {
+                  "type": "set_contributor_name_type_id",
+                  "parameter": {
+                    "name": "Corporate name"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "target": "contributors.contributorTypeId",
+          "description": "Type of contributor",
+          "applyRulesOnConcatenatedData": true,
+          "subfield": [
+            "4",
+            "e"
+          ],
+          "rules": [
+            {
+              "conditions": [
+                {
+                  "type": "set_contributor_type_id_by_code_or_name",
+                  "parameter": {
+                    "contributorCodeSubfield": "4",
+                    "contributorNameSubfield": "e"
+                  }
+                }
+              ]
+            }
+          ],
+          "alternativeMapping": {
+            "target": "contributors.contributorTypeText",
+            "description": "Contributor type free text",
+            "ignoreSubsequentSubfields": true,
+            "subfield": [
+              "e"
+            ]
+          }
+        },
+        {
+          "target": "contributors.primary",
+          "description": "Primary contributor",
+          "applyRulesOnConcatenatedData": true,
+          "subfield": [
+          ],
+          "rules": [
+            {
+              "conditions": [],
+              "value": "false"
+            }
+          ]
+        },
+        {
+          "target": "contributors.name",
+          "description": "Personal Name",
+          "applyRulesOnConcatenatedData": true,
+          "subfield": [
+            "a"
+          ],
+          "rules": [
+            {
+              "conditions": [
+                {
+                  "type": "trim_period, trim"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
